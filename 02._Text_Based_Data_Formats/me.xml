@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<me>
+    <name>Emil</name>
+    <age>99</age>
+    <hobbies>
+        <hobby>coding</hobby>
+        <hobby>eating</hobby>
+        <hobby>sleeping</hobby>
+    </hobbies>
+</me>
+
+#xml downsides: filesize stor , "overhead", lang tid at parse
+#xml downsides: kan ikke parse linje for linje, 

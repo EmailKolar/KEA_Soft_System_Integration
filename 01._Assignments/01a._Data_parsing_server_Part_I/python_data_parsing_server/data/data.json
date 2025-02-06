@@ -1,0 +1,19 @@
+{
+    "people": [
+      {
+        "name": "Anders",
+        "age": 88,
+        "job": "General"
+      },
+      {
+        "name": "Robert",
+        "age": 94,
+        "job": "Engineer"
+      },
+      {
+        "name": "Charlie",
+        "age": 22,
+        "job": "Student"
+      }
+    ]
+  }

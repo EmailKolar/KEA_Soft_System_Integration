@@ -1,6 +1,7 @@
 const fs = require('node:fs');
 const xml2js = require('xml2js');
 const yaml = require('js-yaml');
+const fastcsv = require('fast-csv')
 
 function parseDataFile(path){
 
@@ -40,10 +41,15 @@ function parseDataFile(path){
             console.log(yamlData);
             break;
         }
+        case 'csv':{
+            fastcsv.parseString(data, { headers: true }) 
+            .on('data', (row) => console.log('CSV row:', row)); //read up
+            break;
+        }
         default:{
             console.log("file type not supported ;-)")
         }
     }
 });
 }
-parseDataFile('./data/data.yaml')
+parseDataFile('./data/data.csv')

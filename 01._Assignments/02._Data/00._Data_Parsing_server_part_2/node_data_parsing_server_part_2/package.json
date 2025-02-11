@@ -1,0 +1,19 @@
+{
+  "name": "node_data_parsing_server_part_2",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "fast-csv": "^5.0.2",
+    "js-yaml": "^4.1.0",
+    "xml2js": "^0.6.2"
+  }
+}

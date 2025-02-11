@@ -1,0 +1,3 @@
+Alice, 28, Developer
+Bob, 34, Teacher
+Charlie, 22, Student

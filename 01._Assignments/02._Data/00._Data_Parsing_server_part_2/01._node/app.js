@@ -5,28 +5,16 @@ import yaml from "js-yaml";
 import fastcsv from "fast-csv";
 
 const app = express();
-const PORT = 8080;
 
-app.listen(PORT, () => console.log("Server running on port:", PORT));
 
 app.get("/", (req, res) => {
-    res.send({ data: "Express file parser server" });
+    res.send({ data: "Express file parser server /txt, /xml, /json, /yaml & /csv" });
 });
 
-// Function to read and return file data
-function readFile(path, callback) {
-    fs.readFile(path, "utf8", (err, data) => {
-        if (err) {
-            callback(err, null);
-        } else {
-            callback(null, data);
-        }
-    });
-}
 
 // Endpoint for text files
 app.get("/txt", (req, res) => {
-    readFile("./data/data.txt", (err, data) => {
+    fs.readFile("./data/data.txt","utf-8" ,(err, data) => {
         if (err) return res.status(500).send("Error reading file");
         res.send({ content: data });
     });
@@ -34,7 +22,7 @@ app.get("/txt", (req, res) => {
 
 // Endpoint for XML files
 app.get("/xml", (req, res) => {
-    readFile("./data/data.xml", (err, data) => {
+    fs.readFile("./data/data.xml","utf-8", (err, data) => {
         if (err) return res.status(500).send("Error reading file");
         const parser = new xml2js.Parser();
         parser.parseString(data, (err, result) => {
@@ -46,7 +34,7 @@ app.get("/xml", (req, res) => {
 
 // Endpoint for JSON files
 app.get("/json", (req, res) => {
-    readFile("./data/data.json", (err, data) => {
+    fs.readFile("./data/data.json", (err, data) => {
         if (err) return res.status(500).send("Error reading file");
         try {
             const jsonData = JSON.parse(data);
@@ -59,7 +47,7 @@ app.get("/json", (req, res) => {
 
 // Endpoint for YAML files
 app.get("/yaml", (req, res) => {
-    readFile("./data/data.yaml", (err, data) => {
+    fs.readFile("./data/data.yaml","utf-8", (err, data) => {
         if (err) return res.status(500).send("Error reading file");
         try {
             const yamlData = yaml.load(data);
@@ -72,7 +60,7 @@ app.get("/yaml", (req, res) => {
 
 // Endpoint for CSV files
 app.get("/csv", (req, res) => {
-    readFile("./data/data.csv", (err, data) => {
+    fs.readFile("./data/data.csv", (err, data) => {
         if (err) return res.status(500).send("Error reading file");
         const rows = [];
         fastcsv
@@ -81,3 +69,8 @@ app.get("/csv", (req, res) => {
             .on("end", () => res.json(rows));
     });
 });
+
+
+const PORT = 8080;
+
+app.listen(PORT, () => console.log("Server running on port:", PORT));

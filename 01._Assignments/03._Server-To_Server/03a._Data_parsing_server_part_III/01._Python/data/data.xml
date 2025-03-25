@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<people>
+  <person>
+    <name>Alice</name>
+    <age>28</age>
+    <job>Developer</job>
+  </person>
+  <person>
+    <name>Bob</name>
+    <age>34</age>
+    <job>Teacher</job>
+  </person>
+  <person>
+    <name>Charlie</name>
+    <age>22</age>
+    <job>Student</job>
+  </person>
+</people>

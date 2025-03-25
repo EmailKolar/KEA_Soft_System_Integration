@@ -3,7 +3,7 @@ import fs from "node:fs";
 import xml2js from "xml2js";
 import yaml from "js-yaml";
 import fastcsv from "fast-csv";
-
+import axios from "axios";
 const app = express();
 
 
@@ -69,6 +69,21 @@ app.get("/csv", (req, res) => {
             .on("end", () => res.json(rows));
     });
 });
+
+//call fastapi server
+app.get("/fastapiData/:type", async (req, res) => {
+    const { type } = req.params;
+    const route = "http://127.0.0.1:8000/";
+    try{
+        const response = await axios.get(`${route}${type}`);
+        res.send(response.data);
+    }
+    catch (error) {
+        res.status(500).json({ error: "Failed to fetch data from FastAPI", details: error.message });
+      }
+}
+);
+
 
 
 const PORT = 8080;

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server-sent event</title>
+</head>
+<body>
+    <h1>Server-Sent Events</h1>
+    <ul id="events"></ul>
+
+    <script>
+        
+        const eventSource = new EventSource('http://localhost:8000/sse');
+        
+       
+        //eventsource.onmessage can also work here
+        eventSource.addEventListener("message",(event)=>{
+            const newElement = document.createElement("li");
+            newElement.textContent = event.data;
+            document.getElementById("events").appendChild(newElement);
+
+        })
+
+        
+    </script>
+</body>
+</html>

@@ -7,7 +7,7 @@ app.use(express.static('public'));
 app.get("/sse",(req,res)=>{
     res.setHeader("Content-Type", "text/event-stream");
     res.setHeader('Cache-Control', 'no-cache');
-    res.setHeader('Connection', "keep-alive")
+    res.setHeader('Connection', "keep-alive");
 
     res.write(`data: connected to server \n\n`)
     let counter = 0;

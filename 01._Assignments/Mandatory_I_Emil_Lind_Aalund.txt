@@ -1,0 +1,8 @@
+Mandatory I
+Emil Lind Aalund, Fredag 28. Marts 2025
+
+01a: https://github.com/EmailKolar/KEA_Soft_System_Integration/tree/main/01._Assignments/01a._Data_parsing_server_Part_I 
+03a: https://github.com/EmailKolar/KEA_Soft_System_Integration/tree/main/01._Assignments/03._Server-To_Server/03a._Data_parsing_server_part_III/01._Python 
+04a: https://github.com/EmailKolar/KEA_Soft_System_Integration/tree/main/01._Assignments/04._Server-To-Client/04a._SSE/01._Node 
+04b: https://github.com/EmailKolar/Granular_DB_Documentation_neo4j/ 
+06a: https://github.com/EmailKolar/KEA_Soft_System_Integration/tree/main/01._Assignments/04._Server-To-Client/04a._SSE 

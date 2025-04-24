@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+
+    <h2>basic form</h2>
+    <form action="http://localhost:8000/form" method="post">
+    <!-- <form action="http://localhost:8080/form" method="post"> -->
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="username...">
+
+        <label for="password">Password</label>
+        <input type="text" name="password" placeholder="password...">
+
+        <input type="submit" value="submit">
+    </form>
+
+    <h2>File Form</h2>
+    <form action="http://localhost:8080/fileform" method="post" enctype="multipart/form-data">
+        <label for="file">File</label>
+        <!-- you can support multiple files with multiple -->
+        <input type="file" name="file" accept="image/*">
+
+        <label for="description">Description</label>
+        <input type="text" name="description" placeholder="description...">
+        <input type="submit" value="Send File">
+    </form>
+
+
+    <script>
+        const fileInput = document.querySelector('input[type="file"]');
+
+        fileInput.addEventListener("change", (event)=>{
+            const file = event.target.files[0];
+            const validTypes = ["image/jpeg", "image/png", "image/gif"];
+
+            if(!validTypes.includes(file.type)){
+               alert("not a valid type")
+               fileInput.value = "";
+               return;
+            }
+            const maxSize = 20 * 1024 * 1024; // 20MB
+            if(file.size > maxSize){
+                alert("file is too large")
+                fileInput.value = "";
+                return;
+            }
+
+        })
+    </script>
+
+</body>
+</html>

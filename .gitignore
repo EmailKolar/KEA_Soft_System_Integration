@@ -2,8 +2,9 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,python
 
 uploads
-
+videos
 .vite
+21._Audio/assets
 
 my_environment/
 

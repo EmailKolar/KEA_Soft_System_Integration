@@ -1,0 +1,17 @@
+I have chosen to document a database, by generating an entity relationship diagram, 
+using the free tool: "dbdiagram.io".
+
+
+Step one: get sql dump
+- server -> data export
+- I select the db i want to export
+- Export to Self-contained File
+- Start export
+- go to dumps folder and copy contents of File
+
+Step 2:
+- go to https://dbdiagram.io/d 
+- click import -> mysql
+- paste dump in the modal
+
+And now a erd is generated

@@ -1,14 +1,11 @@
 import express from 'express';
-import cors from 'cors';
 import { ApolloServer } from 'apollo-server-express';
-import { readFile } from 'fs/promises';
-import { createServer } from 'http';
-import { WebSocketServer } from 'ws';
-import { useServer } from 'graphql-ws/lib/use/ws';
+import { gql } from 'apollo-server';
 import { makeExecutableSchema } from '@graphql-tools/schema';
-import resolvers from './resolvers.js';
+import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import resolvers from './resolvers.js';
+
 
 const app = express();
 

@@ -8,4 +8,4 @@ let books = [
     { id: '2', name: 'Author Two' },
   ];
   
-  module.exports = { books, authors };
+  export { books, authors };

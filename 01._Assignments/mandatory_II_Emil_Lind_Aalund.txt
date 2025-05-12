@@ -1,7 +1,7 @@
 Mandatory II
 Emil Lind Aalund, 14. Maj 2025
 
-08a: [Link] a/c webRTC think done - check up
+08a: [Link] a/c webRTC DONE
 
 08b: [Link] code docs - meh
 
@@ -9,10 +9,10 @@ Emil Lind Aalund, 14. Maj 2025
 
 10b: [Link] db migrations - DONE
 
-11a: [Link] auth - mostly done
+11a: [Link] auth - DONE
 
-11b: [Link] payment - mostly done
+11b: [Link] payment - DONE
 
-12a: [Link] webhook - half done
+12a: [Link] webhook - DONE
 
 13a: [Link] graphql - not done

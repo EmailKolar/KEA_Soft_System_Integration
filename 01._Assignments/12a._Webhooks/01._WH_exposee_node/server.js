@@ -106,7 +106,7 @@ app.post('/webhooks/unregister', async (req, res) => {
  */
 app.post('/ping', async (req, res) => {
     try {
-      const notified = await triggerEvent("invoice.paid", { test: true });
+      const notified = await triggerEvent("invoice.paid", { test: "ping - Great succes" });
       res.json({ success: true, notified });
     } catch (err) {
       res.status(500).json({ error: err.message });

@@ -1,18 +1,18 @@
 Mandatory II
 Emil Lind Aalund, 14. Maj 2025
 
-08a: [Link] a/c webRTC DONE
+08a: https://github.com/EmailKolar/KEA_Soft_System_Integration/tree/main/16._WebRTC
 
-08b: [Link] code docs - meh
+08b: https://github.com/realkoder/antik-moderne-dls-encore 
 
-10a: [Link] db docs - DONE
+10a: https://github.com/EmailKolar/KEA_Soft_System_Integration/tree/main/01._Assignments/10a._Document_a_database
 
-10b: [Link] db migrations - DONE
+10b: https://github.com/EmailKolar/Database_data_migration 
 
-11a: [Link] auth - DONE
+11a: https://github.com/EmailKolar/KEA_Soft_System_Integration/tree/main/01._Assignments/11a._Auth_Integration/02._firebase 
 
-11b: [Link] payment - DONE
+11b: https://github.com/EmailKolar/KEA_Soft_System_Integration/tree/main/01._Assignments/11b._payment_integration/01._node_stripe
 
-12a: [Link] webhook - DONE
+12a: https://github.com/EmailKolar/KEA_Soft_System_Integration/tree/main/01._Assignments/12a._Webhooks 
 
-13a: [Link] graphql - not done
+13a: https://github.com/EmailKolar/KEA_Soft_System_Integration/tree/main/01._Assignments/13a._graphQL/01._apollo_server 
